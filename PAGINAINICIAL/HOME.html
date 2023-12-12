@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GHANJADROPS</title>
+  <STyle>
+    body{
+    background-image:  linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./FOTOS/foto2.png);
+   background-position: top;
+   background-size: cover;
+}
+
+.row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+
+}
+.col{
+    flex-basis: 50%;
+    color: antiquewhite;
+    text-align: center;
+    
+}
+
+.row1{
+    align-items: center;
+}
+h1{
+    font-size: 60px;
+}
+i{
+    font-size: 40px;
+}
+
+  </STyle>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <nav class="navbar navbar-dark  fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i>GHANJADROPS</i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">GHANJADROPS</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/PAGINAINICIAL/HOME.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./TIENDA/TIENDA.HTML">TIENDA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">VIDEOS Y FOTOS </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">MUSICA</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                NA
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="">NA</a></li>
+                <li><a class="dropdown-item" href="">NA</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <br>
+  <br>
+  <br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="row">
+   <div class="col col-lg-4  ">
+    <H1>GHANJADROPS</H1>
+    <i>El arte y la cultura a solo un clik</i>
+   </div>
+ 
+  
+    <div class="col col-lg-16 ">
+  <div id="carouselExampleFade" class="carousel slide carousel-fade pt-lg-2" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./FOTOS/foto1.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./FOTOS/foto4.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./FOTOS/foto1.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./FOTOS/foto4.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./FOTOS/Foto3.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+  </div>
+</div>
+    <!--incluye cdm de sweetalert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"> </script>
+    <!--incluye cdm de sweetalert-->
+</body>
+</html>

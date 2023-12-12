@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lista de Usuarios</title>
+    <style>
+        body{
+            background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url(../FOTOS/foto4.png);
+            background-position: top;
+            background-size: cover;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        td,p{
+            color: #dddddd;
+        }
+        h1{
+            color: #dddddd;
+            text-align: center;
+            font-size: 70px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Usuarios</h1>
+    <br>
+
+    <div>
+        <label for="searchId"><p>Buscar por Número de Identificación:</p></label>
+        <input type="text" id="searchId" name="searchId">
+        <button onclick="searchById()">Buscar</button>
+    </div>
+<br>
+<br>
+    <table id="usersTable">
+        <thead>
+            <tr>
+                <th>Número de Identificación</th>
+                <th>Primer Nombre</th>
+                <th>Segundo Nombre</th>
+                <th>Primer Apellido</th>
+                <th>Segundo Apellido</th>
+                <th>ID Tipo Documento</th>
+                <th>Correo</th>
+            </tr>
+        </thead>
+        <tbody id="usersTableBody">
+            <!-- Aquí se insertarán los datos de los usuarios -->
+        </tbody>
+    </table>
+
+    <script>
+        function searchById() {
+            const searchValue = document.getElementById('searchId').value;
+
+            fetch('admin.php')
+                .then(response => response.json())
+                .then(data => {
+                    const usersTableBody = document.getElementById('usersTableBody');
+                    usersTableBody.innerHTML = ''; // Limpiar la tabla antes de mostrar resultados
+
+                    data.forEach(user => {
+                        if (user.NumeroDeIdentificacion === searchValue) {
+                            const row = document.createElement('tr');
+                            row.innerHTML = `
+                                <td>${user.NumeroDeIdentificacion}</td>
+                                <td>${user.PrimerNombre}</td>
+                                <td>${user.SegundoNombre}</td>
+                                <td>${user.PrimerApellido}</td>
+                                <td>${user.SegundoApellido}</td>
+                                <td>${user.ID_TPDOC}</td>
+                                <td>${user.correo}</td>
+                            `;
+                            usersTableBody.appendChild(row);
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        
+        fetch('admin.php')
+            .then(response => response.json())
+            .then(data => {
+                const usersTableBody = document.getElementById('usersTableBody');
+
+                // Recorrer los datos y crear filas para la tabla
+                data.forEach(user => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${user.NumeroDeIdentificacion}</td>
+                        <td>${user.PrimerNombre}</td>
+                        <td>${user.SegundoNombre}</td>
+                        <td>${user.PrimerApellido}</td>
+                        <td>${user.SegundoApellido}</td>
+                        <td>${user.ID_TPDOC}</td>
+                        <td>${user.correo}</td>
+                    `;
+                    usersTableBody.appendChild(row);
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    </script>
+</body>
+</html>

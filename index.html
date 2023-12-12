@@ -1,0 +1,130 @@
+
+<!doctype html>
+
+<html lang="en" >
+  <head>
+   
+
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script> 
+
+    <script>
+      function validarFormulario(event) {
+          var response = grecaptcha.getResponse();
+          if (response.length === 0) {
+              alert("Por favor, completa el CAPTCHA.");
+              event.preventDefault(); // Evita que el formulario se envíe si el CAPTCHA no está completado
+          }
+      }
+  </script>
+
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.rtl.min.css" integrity="sha384-+4j30LffJ4tgIMrq9CwHvn0NjEvmuDCOfk6Rpg2xg7zgOxWWtLtozDEEVvBPgHqE" crossorigin="anonymous">
+   <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/9c8127b469.js" crossorigin="anonymous"></script>
+    <title>RST</title>
+  </head>
+  <body class="bg-dark">
+   <section>
+    <div class="row g-0"> 
+
+        <div class="col-lg-7"> 
+          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active " data-bs-interval="2000">
+                <img src="./FOTOS/foto4.png" class="d-block  w-100 min-vh-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="./FOTOS/Foto3.png" class="d-block w-100 min-vh-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="./FOTOS/foto1.png" class="d-block w-100 min-vh-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        
+        <div class="col-lg-5 d-flex flex-column">
+            <div class="px-lg-5 pt-lg-4 pb-lg-3 p-4">
+                <h1>GHANJADROP'S</h1>
+            </div>
+            <div class="px-lg-5 py-lg-4 p-4 ">
+              <h2> <i>BIENVENIDO DE NUEVO</i></h2>
+              <form class="mb-5" class="login-container" action="validar.php"  onsubmit="return validarFormulario(event)" method="POST">
+                <div class="mb-5">
+                  <label for="NumeroDeIdentificacion" class="form-label">NumeroDeIdentificacion</label>
+                  <input type="number" name="NumeroDeIdentificacion" id="NumeroDeIdentificacion" class="form-control bg-dark-x border-0" placeholder="NumeroDeIdentificacion" required>
+        
+                </div>
+                
+                <div class="mb-5">
+                  <label for="exampleInputEmail1" class="form-label font-weight-bold ">Email </label>
+                  <input type="email" name="em" class="form-control bg-dark-x border-0" placeholder="Ingresa Tu Email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                  
+                </div>
+                <div class="mb-5">
+                  <label for="exampleInputPassword1" class="form-label  font-weight-bold">Contraseña</label>
+                  <input type="password" name="contracena" class="form-control bg-dark-x border-0 mb-2" placeholder="Ingrese su Contraseña" id="contracena" required>
+                  <a href="./recuperarcontraseña.html" id="ContraseñaHelp" class="form-text text-nuted text-decoration-none">¿Has olvidado tu Contraseña?</a>
+                </div>
+                <br>
+               
+                
+                <div class="mb-3">
+                  <div class="g-recaptcha" data-sitekey="6LcVMyYpAAAAABBlJtC35GJTYHxtR-jWax5sC84l"></div>
+              </div>
+                      
+                
+              
+<br>
+              <center>
+                <button type="submit" class="btn btn-primary w-100" value="log it">Iniciar Sesión</button>
+                <br>
+               
+              </center>
+            
+              </form>
+              <center>
+                <i>O Inicie sesion Como:</i>
+                <br>
+              <a  href="./admin/admin.html">ADMINISTRADOR</a>
+            </center>
+            </div>
+            <div class="text-center pt-lg-3 pt-lg-5 p-4">
+              <p class="d-inline-block mb-0">¿Todavia no tienes una cuenta? </p> <a href="./ingreso/crearcuenta.php" class="text-light font-weight-bold text-decoration-none" >Crea Una Ahora</a>
+            </div>
+        </div>
+
+    </div>
+   </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    -->
+
+    <!--incluye cdm de sweetalert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"> </script>
+    <!--incluye cdm de sweetalert-->
+  </body>
+</html>

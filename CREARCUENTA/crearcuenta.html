@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+   <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<style>
+    h1{
+        font-family: cursive ;
+        font-size: 30px;
+        color:white;
+        text-decoration: none;
+        
+    }
+    a{
+        text-decoration: none;
+    }
+
+
+</style>
+</head>
+<body class="bg-dark">
+    <section>
+ <div class="row g-0">
+<div class="col col-lg-6 ">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner ">
+          <div class="carousel-item   active ">
+            <img src="../FOTOS/foto1.png" class="d-block w-100 min-vh-100 " alt="...">
+          </div>
+          <div class="carousel-item ">
+            <img src="../FOTOS/foto4.png" class="d-block w-100 min-vh-100" alt="...">
+          </div>
+          <div class="carousel-item ">
+            <img src="../FOTOS/Foto3.png" class="d-block w-100 min-vh-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <BR></BR>
+      <CENTER>
+      <a href="/index.html"> <H1>INICIAR SESION</H1></a>
+    </CENTER>
+</div>
+
+<div class="col col-lg-6 bg-dark">
+    <br>
+    <br>
+
+    <CENTER>
+    <h1>CREAR CUENTA</h1>
+      </CENTER>
+      <br>
+
+      <form action="insertar.php" method="post">
+        <div class="px-5 text-white">
+        <div class="mb-3">
+          <label for="PrimerNombre" class="form-label">Primer Nombre</label>
+          <input type="text" class="form-control" Name="PrimerNombre" required>
+
+        </div>
+        <div class="mb-3">
+            <label for="SegundoNombre" class="form-label">Segundo Nombre</label>
+            <input type="text" class="form-control" Name="SegundoNombre" required>
+  
+          </div>
+          <div class="mb-3">
+            <label for="PrimerApellido" class="form-label">Primer Apellido</label>
+            <input type="text" class="form-control" Name="PrimerApellido" required>
+  
+          </div>
+          <div class="mb-3">
+            <label for="SegundoApellido" class="form-label">Segundo Apellido</label>
+            <input type="text" class="form-control" Name="SegundoApellido" required>
+  
+          </div>
+        <div class="mb-3">
+          <label for="Correo" class="form-label">Correo</label>
+          <input type="email" class="form-control " name="Correo" required>
+        </div>
+        <div class="mb-3">
+            <label for="Contracena" class="form-label"> Password</label>
+            <input type="password" class="form-control" name="Contracena">
+          </div>
+          <center>
+        <button type="submit" class="btn btn-primary w-100">ENVIAR</button>
+          </center>
+    </form>
+    <BR></BR>
+    <CENTER>
+    <h1>ACTIVAR CORREO</h1>
+</CENTER>
+    <form action="insertar2.php" method="post">
+        <div class="mb-3">
+          <label for="Correo" class="form-label">  Correo</label>
+          <input type="email" class="form-control " name="Correo" required>
+        </div>
+        <div class="mb-3">
+            <label for="Contracena" class="form-label">  Password</label>
+            <input type="password" class="form-control" name="Contracena">
+          </div>
+          <div class="mb-3">
+            <label for="ID_Docente" class="form-label">  ID_Docente</label>
+            <input type="number" class="form-control" name="ID_Docente">
+          </div>
+          <center>
+            <button type="submit" class="btn btn-primary w-100">ENVIAR</button>
+              </center>
+       </form>
+    </div>
+
+</div>
+ </div>
+</section>
+    <!--incluye cdm de sweetalert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"> </script>
+    <!--incluye cdm de sweetalert-->
+</body>
+</html>

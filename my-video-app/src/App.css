@@ -1,0 +1,173 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+.video-list > div {
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #111;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.video-list > div::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  border: 2px solid #001f3f; /* Azul oscuro estilo neón */
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.5s ease-in-out;
+  transform-origin: center;
+  z-index: -1;
+}
+
+.video-list > div:hover::before {
+  opacity: 1;
+  animation: neonSpin 1s linear infinite; /* Animación de giro */
+}
+
+@keyframes neonSpin {
+  0% {
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+  }
+  100% {
+    transform: scale(0) rotate(360deg);
+  }
+}
+
+/* Resto de estilos... */
+.video-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.video-player {
+  width: 200px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.video-details {
+  flex: 1;
+}
+/* Estilos para el contenedor principal */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black; /* Color de fondo del cuerpo */
+}
+
+/* Estilos para el contenedor de la lista de videos */
+.video-container {
+  background-color: #000033; /* Color interno más oscuro */
+  border-radius: 10px;
+  padding: 20px;
+  width: 1400px;
+  animation: glowAnimation 2s infinite alternate; /* Animación */
+}
+
+@keyframes glowAnimation {
+  0% {
+    background-color: #000000eb; /* Color inicial */
+  }
+  100% {
+    background-color: rgb(255, 0, 0); /* Color más claro */
+  }
+}
+
+.video-container:hover {
+  background-color: #00FF00; /* Color de fondo al pasar el ratón */
+}
+
+/* ...Los estilos restantes se mantienen igual... */
+
+/* Estilos para el botón de búsqueda */
+/* Estilos para el área de búsqueda */
+.search-area {
+  background-color: #333; /* Color de fondo oscuro */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra difusa */
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #444; /* Color de fondo del campo de búsqueda */
+  color: white; /* Color del texto */
+}
+
+.search-button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00FFFF; /* Color del botón */
+  color: #fff; /* Color del texto del botón */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición de color al pasar el ratón */
+}
+
+.search-button:hover {
+  background-color: #00FF00; /* Color del botón al pasar el ratón */
+}
+
+/* Estilos adicionales según sea necesario */
+
+
+/* Estilos para el título */
+.custom-title {
+  padding: 10px; /* Relleno alrededor del título */
+  color: #fff; /* Color del texto */
+  background-color: #00FFFF; /* Color de fondo del título */
+  transition: background-color 0.3s ease; /* Transición de color al pasar el ratón */
+}
+
+.custom-title:hover {
+  background-color: #00FF00; /* Color de fondo del título al pasar el ratón */
+}
+/* Estilos para el título "Lista de Videos" */
+/* Estilos para el título "Lista de Videos" con animación */
+@keyframes flicker {
+  0%, 100% {
+    color: #0de3e3; /* Color inicial del título */
+  }
+  50% {
+    color: #0000d6; /* Color del título al estar encendido */
+  }
+}
+
+.title {
+  font-size: 70px;
+  margin-bottom: 20px;
+  animation: flicker 2s infinite; /* Animación con la duración y repetición deseadas */
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 90px;
+}
+
